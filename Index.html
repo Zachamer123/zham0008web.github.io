@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="images/candelo logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            About Candelo
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            All Books
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            About Us
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Genre
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Fiction</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Non-Fiction</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Sci-Fi</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Comedy</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Fantasy</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Mystery</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Login/SignUp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+
+<!-- ============================================ -->
+<!--                 Search Bar                   -->
+<!-- ============================================ -->
+
+    <div class="search-container">
+        <form id="search-form">
+            <input type="text" id="search-input" name="search" placeholder="Search for books by title, keyword or ISBN">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+
+<!-- ============================================ -->
+<!--                 Recomended BOOK              -->
+<!-- ============================================ -->
+
+<section id="collection-1595">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-tag">Only $20</span>
+            <h2 class="cs-title">Candelo's Weekly Pick</h2>
+            <p class="cs-text">
+                "Dark Emu" by Bruce Pascoe is a thought-provoking book that challenges the traditional view of pre-colonial Indigenous Australian societies as simple hunter-gatherers. Pascoe presents evidence of advanced agricultural practices and settlement patterns, highlighting the richness and diversity of Indigenous cultures before European colonization. The book serves as a critique of the erasure of Aboriginal history and prompts reflection on the ongoing legacy of colonialism.
+            </p>
+            <a href="" class="cs-button-solid">Shop Now</a>
+        </div>
+        <div class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="images/DARK EMU.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="images/DARK EMU.jpg">
+                        <img loading="lazy" decoding="async" src="images/DARK EMU.jpg" alt="hats" width="1280" height="568">
+                    </picture>
+                    <h3 class="cs-product-name">󠀠󠀠󠀠  󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠Dark Emu</h3>
+                    <span class="cs-price">󠀠󠀠󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 󠀠󠀠󠀠 󠀠 󠀠 󠀠 󠀠 󠀠 By Bruce Pascoe</span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="images/61x1cvlNQJL._AC_UF1000,1000_QL80_.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="images/61x1cvlNQJL._AC_UF1000,1000_QL80_.jpg">
+                        <img loading="lazy" decoding="async" src="images/61x1cvlNQJL._AC_UF1000,1000_QL80_.jpg" alt="hats" width="1280" height="568">
+                    </picture>
+                    <h3 class="cs-product-name"></h3>
+                    <span class="cs-price"></span>
+                </a>
+            </li>
+        </div>
+    </div>
+</section>
+                                
+    <!-- ============================================ -->
+<!--                  1 Collection                  -->
+<!-- ============================================ -->
+
+<!--
+    To add a 4th or 5th collection or more, copy and paste the cs-button and change it's data-filter to the next number, in this case it's 4. Do the same to the cs-listing and its data-category number. And that's it!
+-->
+
+<section id="collection-1602">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Best Sellers</h2>
+            <div class="cs-button-group">
+                <button class="cs-button" data-filter="one">
+                    New Arrival
+                </button>
+                <button class="cs-button" data-filter="two">
+                    Top Rating
+                </button>
+                <button class="cs-button" data-filter="three">
+                    Best Seller
+                </button>
+            </div>
+        </div>
+        <div class="cs-listing-wrapper">
+            <!--Listing 1-->
+            <div class="cs-listing" data-category="one">
+                <div class="cs-item">
+                    <a href="" class="cs-link">
+                        <div class="cs-picture-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        srcset="images/homepage_9780733343292.jpg">
+                                <source media="(min-width: 601px)"
+                                        srcset="images/homepage_9780733343292.jpg">
+                                <img loading="lazy" decoding="async"
+                                        src="images/homepage_9780733343292.jpg"
+                                        alt="gallery" width="305" height="400">
+                            </picture>
+                        </div>
+                        <div class="cs-details">
+                            <span class="cs-category">By Sister viv</span>
+                            <h3 class="cs-name">Grantlee Kieza</h3>
+                            <div class="cs-actions">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$14.00</span>
+                                    <div class="cs-stars">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+
+                                    </div>
+                                </div>
+                                <button class="cs-buy">
+                                    <img class="cs-basket"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg"
+                                            alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cs-item">
+                    <a href="" class="cs-link">
+                        <div class="cs-picture-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        srcset="images/large_temp_img.jpg">
+                                <source media="(min-width: 601px)"
+                                        srcset="images/large_temp_img.jpg">
+                                <img loading="lazy" decoding="async"
+                                        src="images/large_temp_img.jpg"
+                                        alt="gallery" width="305" height="400">
+                            </picture>
+                        </div>
+                        <div class="cs-details">
+                            <span class="cs-category">By Bruce Nash</span>
+                            <h3 class="cs-name">All The Words We Know</h3>
+                            <div class="cs-actions">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$16.00</span>
+                                    <span class="cs-was-price">$14.00</span>
+                                    <div class="cs-stars">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                    </div>
+                                </div>
+                                <button class="cs-buy">
+                                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg"
+                                            alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cs-item">
+                    <a href="" class="cs-link">
+                        <div class="cs-picture-group">
+                            <picture class="cs-picture">
+                                <source media="(max-width: 600px)"
+                                        srcset="images/large_9781760526931.jpg">
+                                <source media="(min-width: 601px)"
+                                        srcset="images/large_9781760526931.jpg">
+                                <img loading="lazy" decoding="async"
+                                        src="images/large_9781760526931.jpg"
+                                        alt="gallery" width="305" height="400">
+                            </picture>
+                        </div>
+                        <div class="cs-details">
+                            <span class="cs-category">By Gary Lonesborough</span>
+                            <h3 class="cs-name">We Didnt Think It Through</h3>
+                            <div class="cs-actions">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$10.00</span>
+                                    <div class="cs-stars">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        <img class="cs-star"
+                                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                    </div>
+                                </div>
+                                <button class="cs-buy">
+                                    <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg"
+                                            alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-1390">
+    <div class="cs-container">
+        <div class="cs-top">
+            <a aria-label="go back to home" class="cs-logo" href="">
+            </a>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a href="" class="cs-link">Home</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">About Candelo</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Books</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Locations</a>
+                </li>
+                <li class="cs-li">
+                    <a href="" class="cs-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <!--Social-->
+            <ul class="cs-social">
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+            <span class="cs-copyright">
+                © Copyright 2023 - <a href="" class="cs-copyright-link">Stitch Agency</a>
+            </span>
+            <div class="cs-flex">
+                <a href="" class="cs-copyright-link">Privacy Policy</a>
+                <span class="cs-separater">|</span>
+                <a href="" class="cs-copyright-link">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>
+                                
+
+</header>
+
+</body>
+</html>
